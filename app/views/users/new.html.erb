@@ -1,0 +1,51 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'new', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %> 
+
+<% provide(:title, "Sign up") %>
+
+<body class="text-center">
+
+<main class="form-signin">
+
+  <%= form_with(model: @user, local: true) do |f| %>
+    <img class="mb-4" src="assets/logo_transparent_copy2.png" alt="" width="72" height="57">
+
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+    
+    <%= render 'shared/error_messages' %>
+
+    <%= f.label :name, {class: "visually-hidden"} %>
+    <%= f.text_field :name, {class: "form-control", id: "inputName", placeholder: "Name", autofocus: true } %>
+
+    <%= f.label :email, {class: "visually-hidden"} %>
+    <%= f.email_field :email, {class: "form-control", placeholder: "Email address", id: "inputEmail"} %>
+
+      
+    <%= f.label :password, {class: "visually-hidden"} %>
+    <%= f.password_field :password, {class: "form-control", id: "inputPassword", placeholder: "Password"} %>
+
+
+    <%= f.label :password_confirmation, {class: "visually-hidden"} %>
+    <%= f.password_field :password_confirmation, {class: "form-control", id: "inputPasswordConfirmation", placeholder: "Password confirmation"} %>
+
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    
+    <%= f.submit "Sign up", class: "w-100 btn btn-lg btn-primary" %>
+    <p class="signin">Already have an account? <%= link_to "Sign in", login_path, id: "signin" %></p>
+    
+    <p class="mt-5 mb-3 text-muted">&copy; 2021 Koudai Akiwa</p>
+  
+  <% end %>
+
+</main>
+
+
+
+</body>
+

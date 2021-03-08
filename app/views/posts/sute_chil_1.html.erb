@@ -1,0 +1,46 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>  
+
+<body>
+  
+  <%= render 'layouts/navbar' %>
+
+
+  <div class="container">
+      <div class="row">
+        <aside class="col-md-4">
+          <section class="user_info">
+            <h1>
+              <img alt="sutechil1" class="gravatar" src="assets/sutehage1.jpg" width="80" height="80">
+              Tanaka
+            </h1>
+          </section>
+        </aside>
+        
+      </div>    
+
+    <ol class="posts">
+      <% @posts.each do |post| %>
+        <li class="post">
+          <%= link_to post_path(post.id) do %>
+            <div class="field">
+              <div class="title">
+                <span class="inline normal line"><%= post.date %></span>
+                <span class="inline student line"><%= post.classify %></span>
+                <span class="inline normal line"><%= post.grade %></span>
+                <span class="inline normal"><%= post.subject %></span>
+              </div>
+            </div>
+          <% end %>  
+        </li>
+      <% end %>  
+    </ol>
+
+
+  </div>
+
+
+</body>
+
+

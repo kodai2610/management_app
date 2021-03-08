@@ -1,0 +1,47 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %> 
+
+<% provide(:title, "Log in") %>
+
+<body class="text-center">
+
+<main class="form-signin">
+
+  <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+    <img class="mb-3" src="assets/logo_transparent_copy2.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%=message_type %>"><%= message %></div>
+    <% end %>  
+    
+    <%= f.label :email, {class: "visually-hidden"} %>
+    <%= f.email_field :email, {class: "form-control", placeholder: "Email address", id: "inputEmail", autofocus: true } %>
+
+      
+    <%= f.label :password, {class: "visually-hidden"} %>
+    <%= f.password_field :password, {class: "form-control", id: "inputPassword", placeholder: "Password"} %>
+
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    
+    <%= f.submit "log in", class: "w-100 btn btn-lg btn-primary" %>
+    <p class="signup">Don’t have an account? <%= link_to "Sign up", signup_path, id:"signup" %></p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021 Koudai Akiwa</p>
+  
+  <% end %>
+  
+
+</main>
+
+
+
+</body>
+
+

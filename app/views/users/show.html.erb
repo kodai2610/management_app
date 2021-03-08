@@ -1,0 +1,51 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>  
+
+<% provide(:title, @user.name) %>
+
+<body>
+  
+  <%= render 'layouts/navbar' %>
+
+
+  <div class="container">
+    <% flash.each do |message_type,message| %>
+      <div class="alert alert-info" role="alert"><%= message %></div>
+    <% end %>  
+      <div class="row">
+        <aside class="col-md-4">
+          <section class="user_info">
+            <h1>
+              <%= gravatar_for @user %>
+              Mr. <%= @user.name %>
+            </h1>
+          </section>
+        </aside>
+        
+      </div>    
+
+    <ol class="posts">
+      <% @posts.each do |post| %>
+        <li class="post">
+          <%= link_to post_path(post.id) do %>
+            <div class="field">
+              <div class="title">
+                <span class="inline normal line"><%= post.date %></span>
+                <span class="inline student line"><%= post.classify %></span>
+                <span class="inline normal line"><%= post.grade %></span>
+                <span class="inline normal"><%= post.subject %></span>
+              </div>
+            </div>
+          <% end %>  
+        </li>
+      <% end %>  
+    </ol>
+
+
+  </div>
+
+
+</body>
+
+

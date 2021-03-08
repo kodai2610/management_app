@@ -1,0 +1,46 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'posts_show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<body>
+  <%= render "layouts/navbar" %>
+  <div class="container">
+        <div class="field">
+          <div class="title">
+            <a class="inline normal line"><%= @post.date %></a>
+            <a class="inline student line"><%= @post.classify %></a>
+            <a class="inline normal line"><%= @post.grade %></a>
+            <a class="inline normal"><%= @post.subject %></a>
+          </div>
+
+          <p class="todaytitle">Today</p>
+          <div class="today">
+            <p class="text"><%= @post.today %></p>
+          </div>
+
+          <div class="box">
+            <p class="boxtitle line">HW</p>
+            <p class="boxtitle">Next</p>
+          </div>
+
+          <div class="box bottomline">  
+            <div class="content line"><%= @post.hw %></div>
+            <div class="content"><%= @post.next %></div>
+          </div>
+
+          <p class="teacher">Mr. <%= @post.user.name %></p>
+        </div>
+
+        <div class="custombox">
+          <%= link_to edit_post_path(@post.id) do %>
+            <div class="custom"><i class="fas fa-edit"></i></div>
+          <% end %>
+          
+          <%= link_to post_path(@post.id), method: :delete do %>
+            <div class="custom"><i class="fas fa-trash"></i></div>
+          <% end %>
+
+        </div>
+  </div>
+
+</body>

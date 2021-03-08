@@ -1,0 +1,22 @@
+<header class="shadow mb-3 p-3">
+  <div class="container d-flex flex-column flex-md-row align-items-center ">
+    <%= link_to "Management App", posts_path, {class: "h5 my-0 me-md-auto fw-normal text-white"} %>
+    <nav class="my-2 my-md-0 me-md-3">
+        <%= link_to "Home", posts_path, {class: "p-2 text-white" } %>
+        <%= link_to "Students", students_path, {class: "p-2 text-white" } %>
+        <%= link_to "Teachers", users_path, {class: "p-2 text-white" } %>
+        <a class="dropdown-toggle text-white p-2" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><%= link_to "Profile", current_user, {class: "dropdown-item"} %></li>
+            <li><%= link_to "Settings", "#", {class: "dropdown-item"} %></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= link_to "Log out", logout_path, {method: :delete, class: "dropdown-item"} %></li>
+        </ul>
+    </nav>
+    
+      <%= link_to "Create", new_post_path, { class: "btn btn-outline-primary" } %>
+    
+  </div>  
+</header>

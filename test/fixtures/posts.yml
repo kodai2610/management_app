@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grade: MyString
+  today: MyText
+  hw: MyText
+  next: MyText
+  user: one
+
+two:
+  grade: MyString
+  today: MyText
+  hw: MyText
+  next: MyText
+  user: two

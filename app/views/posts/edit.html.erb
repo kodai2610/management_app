@@ -1,0 +1,73 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<% provide(:title, "Edit report") %>
+
+<body>
+  <%= render "layouts/navbar" %>
+  <div class="container">
+    <%= form_with(model: @post, local:true) do |f| %>
+      <p class="title">Edit</p>
+      <ul class="elementbox">
+        <li class="element">
+          <i class="fas fa-calendar-week box"></i>
+          <%= f.label :date, {class: "visually-hidden"} %>
+          <%= f.text_field :date, {placeholder: "Date"} %>
+          <!--<input type="text" placeholder="Date" class="textbox">-->
+        </li>
+
+        <li class="element">
+          <i class="fas fa-user box"></i>
+          <%= f.select :classify, [["Tanaka", "Tanaka"],["Kiriyama", "Kiriyama"],["Sato", "Sato"],["Suzuki", "Suzuki"], ["Sasaki", "Sasaki"]], include_blank: "Select student" ,id: "post_classify" %>
+        </li>
+
+        <li class="element">
+          <i class="fas fa-school box"></i>
+          <%= f.label :grade, {class: "visually-hidden"} %>
+          <%= f.text_field :grade, {placeholder: "Grade"} %>
+          <!--<input type="text" placeholder="Grade">-->
+        </li>
+
+        <li class="element">
+          <i class="fas fa-user-graduate box"></i>
+          <%= f.label :subject, {class: "visually-hidden"} %>
+          <%= f.text_field :subject, {placeholder: "Subject"} %>
+          <!--<input type="text" placeholder="Subject">-->
+        </li>
+
+
+        <li class="element">
+          <i class="fas fa-pen box"></i>
+          <%= f.text_area :today, {placeholder: "Today", size: "40x5" } %>
+          <!--<textarea placeholder="Today" rows="40x5"></textarea>-->
+        </li>
+
+        <li class="element">
+          <i class="fas fa-pen box"></i>
+          <%= f.label :hw, {class: "visually-hidden"} %>
+          <%= f.text_area :hw, {placeholder: "Homework", size: "40x3"} %>
+          <!--<textarea placeholder="Homework" rows="3"></textarea>-->
+        </li>
+
+        <li class="element">
+          <i class="fas fa-pen box"></i>
+          <%= f.label :next, {class: "visually-hidden"} %>
+          <%= f.text_area :next, {placeholder: "Next", size: "40x3"} %>
+          <!--<textarea placeholder="Next" rows="3"></textarea>-->
+        </li>
+
+      </ul>
+      <div class="send">
+        <!--<button type="submit"><i class="fas fa-paper-plane"></i></button>-->
+        <%= f.button :type => "submit" do %>
+          <i class="fas fa-paper-plane"></i>
+        <% end %>  
+      </div>
+    <% end %>
+
+
+
+
+  </div>
+<body>

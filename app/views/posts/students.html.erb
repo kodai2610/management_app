@@ -1,0 +1,42 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'users', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
+<body>
+  <%= render "layouts/navbar" %>
+  <div class="container">
+
+
+    <h1>All students</h1>
+
+    <ul class="users">
+        <li>
+          <img alt="sutechil1" class="gravatar" src="assets/sutehage1.jpg" width="50" height="50"> 
+          <%= link_to "Tanaka", sute_chil_1_path %>
+        </li>
+
+        <li>
+          <img alt="sutechil1" class="gravatar" src="assets/sutehage2.jpg" width="50" height="50">
+          <%= link_to "Kiriyama", sute_chil_2_path %>
+        </li>
+
+        <li>
+          <img alt="sutechil3" class="gravatar" src="assets/sutehage3.jpg" width="50" height="50">
+          <%= link_to "Sato", sute_chil_3_path %>
+        </li>
+
+        <li>
+          <img alt="sutechil4" class="gravatar" src="assets/sutehage4.png" width="50" height="50">
+          <%= link_to "Suzuki", sute_chil_4_path %>
+        </li>
+
+        <li>
+          <img alt="sutechil5" class="gravatar" src="assets/sutehage5.jpg" width="50" height="50">
+          <%= link_to "Sasaki", sute_chil_5_path %>
+        </li>
+    </ul>
+
+        
+  </div>
+
+</body>

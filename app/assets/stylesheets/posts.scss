@@ -1,0 +1,110 @@
+@import "navbar";
+
+body {
+  background: #f5f5f5!important;
+  padding-bottom: 60px;
+}
+
+form {
+  width: 450px;
+  margin: 40px auto;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.elementbox {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+.element {
+  margin-top: 10px;
+  list-style: none;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.25);
+}
+
+
+p {
+  font-size: 48px;
+  font-weight: lighter;
+  text-align: center;
+  color:rgba(0,0,0,0.6);
+}
+
+input[type="text"]{
+  width: 85%;
+  padding-bottom: 20px;
+  font-size: 24px;
+  border: 0;
+}
+
+#post_classify {
+  width: 85%;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border: 0;
+}
+
+input::placeholder {
+  color:rgba(0,0,0,0.4);
+  font-weight: lighter;
+}
+
+.box {
+  margin-left: 7px;
+  margin-right: 10px;
+  color: rgba(0,0,0,0.4);
+  font-size: 24px;
+}
+
+.fa-school {
+  margin-right: 4px;
+}
+
+textarea {
+  width: 85%;
+  vertical-align: top;
+  font-size: 24px!important;
+  border: 0;
+  padding-bottom: 20px;
+}
+
+textarea::placeholder {
+  color:rgba(0,0,0,0.4);
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+.send {
+  text-align: center;
+}
+
+button {
+  width: 22.5%;
+  background: transparent;
+  margin-top: 42px!important;
+  margin-bottom: 42px!important;
+  border-radius: 10px!important;
+  border: 2px solid #0D6EFD;
+  color: #0D6EFD;
+  padding: 5px 15px;
+  transition: 0.15s;
+}
+
+button:hover {
+  background: #0D6EFD;
+  border: 2px solid transparent;
+  color: white;
+}
+
+
+.fa-paper-plane {
+  font-size: 25px;
+}
+
+
+
+
+
+

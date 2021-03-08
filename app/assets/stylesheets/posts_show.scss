@@ -1,0 +1,150 @@
+@import "navbar";
+
+body {
+  background: #f5f5f5!important;
+}
+
+
+.container {
+  text-align: center;
+}
+
+.field {
+  margin-top: 80px;
+  display: inline-block;
+  width: 750px;
+  height: 500px;
+  background: white;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  border-bottom: 1.5px solid rgba(0,0,0,0.25);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.inline {
+  display: inline-block;
+  line-height: 50px;
+  color: black;
+}
+
+.inline:visited,
+.inline:active,
+.inline:hover {
+  color: inherit;
+}
+
+.normal {
+  width: 20%;
+}
+
+.line {
+  border-right: 1.5px solid rgba(0,0,0,0.25);
+}
+
+.student {
+  width: 40%;
+}
+
+.todaytitle {
+  font-size: 20px;
+  background-color: #ACB4B8; 
+  height: 40px;
+  line-height: 40px;
+}
+
+.today {
+  height: 160px;
+  padding: 0 10px;
+}
+
+.text {
+  font-size: 16px;
+  text-align: left;
+  word-wrap: normal;
+}
+
+.box {
+  display: flex;
+}
+
+.boxtitle {
+  font-size: 20px;
+  width: 50%;
+  background-color: #ACB4B8;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.content {
+  width: 50%;
+  height: 160px;
+  padding: 16px 10px;
+  font-size: 16px;
+  text-align: left;
+  word-wrap: normal;
+}
+
+.teacher {
+  margin: 0;
+  height: 32.5px;
+  line-height: 32.5px;
+  font-size: 22px;
+}
+
+.bottomline {
+  border-bottom: 1.5px solid rgba(0,0,0,0.25);
+}
+
+.custombox {
+  display: flex;
+  justify-content: center;
+}
+
+.custom {
+  width: 80px;
+  height: 40px;
+  border: 2px solid #0D6EFD;
+  border-radius: 10px;
+  margin: 40px 25px;
+  color: #0D6EFD;
+}
+
+.fas {
+  font-size: 24px;
+  line-height: 36px!important;
+}
+
+.custom:hover{
+  background: #0D6EFD;
+  border: 2px solid transparent;
+  color: #fff; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
